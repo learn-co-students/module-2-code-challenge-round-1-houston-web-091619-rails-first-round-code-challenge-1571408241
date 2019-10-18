@@ -1,0 +1,10 @@
+<h3>Super Power: <%= @power.name%></h3>
+<h3>Description: <%= @power.description%></h3>
+
+<h3>All heroines who has this power</h3>
+<% @power.heroines.each do |i|%>
+    <%=link_to i.name%><br>
+<%end%>
+
+<a href='/powers/<%=@power.id%>/edit'><button> Edit Power</button><a>
+<a href='/powers'><button> All Powers</button><a>
