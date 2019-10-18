@@ -1,0 +1,5 @@
+<h3><%= @heroine.name%></h3>
+<h3>Super Name: <%= @heroine.super_name%></h3>
+<h3>Super Power: <%=link_to @heroine.power.name%></h3>
+
+<a href='/heroines/<%=@heroine.id%>/edit'><button> Edit Heroine</button><a>
