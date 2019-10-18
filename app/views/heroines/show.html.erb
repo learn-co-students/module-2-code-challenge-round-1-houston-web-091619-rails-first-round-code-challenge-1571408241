@@ -1,0 +1,7 @@
+<h1>Name: <%= @heroine.name %></h1>
+<p>Super Name: <%= @heroine.super_name %></p>
+<p>Power: <%= link_to @heroine.power.name, power_path(@heroine.power) %></p>
+
+
+
+<%= link_to 'delete', url_for(action: :destroy, id: @heroine.id), method: :delete, data: {confirm: "Are you sure?"} %>
