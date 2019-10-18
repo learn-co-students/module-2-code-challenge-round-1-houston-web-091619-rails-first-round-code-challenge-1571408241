@@ -1,0 +1,11 @@
+<%= tag.h1 "Heroine Information" %>
+
+<ul>
+
+<%= tag.li @heroine.name%>
+
+<%= tag.li @heroine.super_name%>
+
+<a href="<%= power_path(@heroine.power.id) %>"><%= tag.li @heroine.power.name %></a>
+
+<ul>
