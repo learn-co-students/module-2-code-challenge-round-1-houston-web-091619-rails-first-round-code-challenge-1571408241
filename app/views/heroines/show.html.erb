@@ -1,0 +1,8 @@
+<h1> This is the Heroine Page </h1>
+<h1> Name: <%= @heroine.name %> </h1>
+<li> Name: <%= heroine.name %>
+ Super_name: <%= heroine.super_name%></li>
+<% end %>
+
+<%link_to ' delete', url_for(action: :destroy, id: @heroine.id), method: :delete, data: {confirm: 'Please, No!'}%>
+<%end%>

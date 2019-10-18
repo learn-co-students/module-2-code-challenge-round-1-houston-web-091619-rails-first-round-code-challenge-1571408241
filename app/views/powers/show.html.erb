@@ -1,0 +1,9 @@
+<h1> All this Power!!! </h1>
+<h1> Name: <%= @power.name %> </h1>
+<% @heroines.each do |heroine|%>
+<li> Name: <%=heroine.name %>
+ Super_name: <%= heroine.super_name%>
+</li>
+<% end %>
+
+<%link_to ' delete', url_for(action: :destroy, id: @power.id), method: :delete, data: {confirm: 'Please, No!'}%>
