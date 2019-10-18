@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                background: gray;
+                font-family: arial, sans-serif;
+                color: white
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2><%= @heroine.super_name %></h2>
+        <h3><%= @heroine.name %></h3>
+        <h3><%= link_to @heroine.power.name, power_path(@heroine.power) %>
+    </body>
+</html>

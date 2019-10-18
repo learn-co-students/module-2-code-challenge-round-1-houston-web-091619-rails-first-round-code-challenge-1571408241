@@ -20,7 +20,8 @@ heroines = [
   {name:"Jean Grey", super_name:"Dark Phoenix" },
   {name:"Ororo Munroe", super_name:"Storm" },
   {name:"Kitty Pryde", super_name:"Shadowcat" },
-  {name:"Elektra Natchios", super_name:"Elektra" }
+  {name:"Elektra Natchios", super_name:"Elektra" },
+  # {name:"alexis", super_name:"swag boi" }
 ]
 
 # ---------------
@@ -34,3 +35,5 @@ heroines = heroines.map { |heroine| heroine.merge( { power_id: Power.all.sample.
 # ---------------
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+Heroine.create(name: 'alexis', super_name: 'swag boi', power: Power.find_by(name:'flight'))

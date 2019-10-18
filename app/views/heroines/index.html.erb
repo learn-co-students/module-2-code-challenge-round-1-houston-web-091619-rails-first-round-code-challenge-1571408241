@@ -1,10 +1,26 @@
-<h2>All Heroines</h2>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                background: gray;
+                font-family: arial, sans-serif;
+                color: white
+            }
+        </style>
+    </head>
 
-<ul>
-  <% @heroines.each do |heroine| %>
-    <li>
-      <%= heroine.super_name %>
-    </li>
-    <br>
-  <% end %>
-</ul>
+    <body>
+        <h2>All Heroines</h2>
+        <br>
+        
+        <ul>
+          <% @heroines.each do |heroine| %>
+            <li>
+              <%= link_to heroine.super_name, heroine_path(heroine) %>
+            </li>
+            <br>
+          <% end %>
+        </ul>
+    </body>
+</html>
