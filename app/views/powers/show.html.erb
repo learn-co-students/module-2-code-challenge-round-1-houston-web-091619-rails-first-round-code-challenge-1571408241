@@ -1,0 +1,22 @@
+<br><br><br>
+
+<li> Name: <%= @power.name %></li>
+<li> Super Hero Name: <%= @power.name %></li> 
+<li> Description: <%= @power.description %>  </li>
+<br><br><br>
+Heroines Names: 
+<% @power.heroines.each do |i| %>    
+    <li> <%= i.super_name %>  </li>    
+<% end %>
+   
+</p>  
+<%= form_for @power, method: :delete do |f| %>
+<%= f.submit "Delete heroine" %>
+<% end %>
+
+
+<br><br><br>
+<a href='/heroines'>Heroines</a><br>
+<a href='/heroines/new'>Add New Heroines </a><br><br>
+<a href='/powers'>Powers</a><br>
+<a href='/powers/new'>Add New Powers</a><br>

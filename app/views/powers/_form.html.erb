@@ -1,0 +1,7 @@
+<%= form_for @power do |f| %>
+<%= f.label :name %><%= f.text_field :name %>
+<%= f.label :description %><%= f.text_field :description %>
+<%= f.collection_check_boxes :hero_ids, @heros, :id, :name %>
+<%= f.submit %>
+<% end %>
+
